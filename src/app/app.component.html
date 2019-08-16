@@ -3,15 +3,34 @@
     <div class="col1">
     </div>
     <div class="col2">
-      <h1>How can we help you?</h1>
+      <h1  style="font-family: Roboto, Helvetica Neue ,sans-serif;">How can we help you?</h1>
       <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Type keywords to find answers">
       </mat-form-field>
+      <div style="position: inherit; text-align: -webkit-center;">
+          <mat-card style="width: fit-content;">
+              <mat-chip-list aria-label="key word">
+                        <h1 style="font-size: 1.5em;">Keywords : </h1>
+                        <mat-chip color="accent" selected (click)="keywords('Lost')">Lost</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('Phone')">Phone</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('Reward')">Reward</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('Alert')">Alert</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('police complaint')">police complaint</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('unauthorized')">unauthorized</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('delivery')">delivery</mat-chip>
+                        <mat-chip color="accent" selected (click)="keywords('privacy')">privacy</mat-chip> 
+              </mat-chip-list>
+          </mat-card>
+      </div>
     </div>
     <div class="col3">
     </div>
   </div>
 </div>
+<br>
+<!-- <button mat-raised-button color="primary" [value]="lost" (click)="word1('reward')">lost</button> -->
+
+<br>
 
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
